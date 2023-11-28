@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    transition: all ease-in-out 50ms;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6rem;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 1.6rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+    font-weight: 600;
+    color: #475569;
+    padding: .8rem;
+    border-radius: .4rem;
+}
+.copyright:visited {
+    color: #475569
+}
+.copyright:hover {
+    background: #cbd5e1;
+}
+
+.output {
+    position: absolute;
+    top: 3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10rem;
+    padding: .8rem 4.2rem;
+    background: #eef2ff;
+    border-radius: .8rem;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 3.2rem;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyboard {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* rotateX(10deg) rotateY(2deg) rotateZ(5deg) */
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    padding: 1.6rem;
+    background: #eef2ff;
+    border-radius: .8rem;
+    z-index: 99;
+}
+
+.keyboard__depth {
+    position: absolute;
+    width: 89.4rem;
+    height: calc(33.4rem + 2.4rem);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background: linear-gradient(#cbd5e1 95%, #94a3b8);
+    border-radius: .8rem;
+    box-shadow: 0 16px 32px 4px #94a3b896;
+}
+
+.keyboard__row {
+    position: relative;
+    display: flex;
+    gap: .4rem;
+}
+
+.keyboard__cable {
+    position: absolute;
+    top: -20rem;
+    left: 1.6rem;
+    background: linear-gradient( to right,#cbd5e1, #e2e8f0, #cbd5e1);
+    height: 20rem;
+    width: 2rem;
+}
+
+.keyboard__cable::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f8fafc 1%, transparent);
+}
+
+.keyboard__key {
+    position: relative;
+    height: 5.4rem;
+    border-radius: .4rem;
+    color: #1e293b;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(#e2e8f0, #d8dee6);
+    box-shadow: 0 4px 0 0 #cbd5e1;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: .2rem #1e293b;
+    cursor: pointer;
+}
+
+.keyboard__key:hover {
+    background: linear-gradient(#ccd1d9, #b6bbc2);
+}
+
+.keyboard__key:hover>.keyboard__key::after {
+    background: none;
+}
+
+.keyboard__key * {
+    z-index: 2;
+}
+
+.keyboard__key--logo {
+    height: 2.8rem;
+}
+
+.keyboard__key--subtext {
+    color: #334155;
+}
+
+.keyboard__key::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .4rem;
+    background: radial-gradient(at right top, #d1dded, transparent);
+}
+
+.keyboard__key:active {
+    background: linear-gradient(#b6bbc2, #ccd1d9);
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.pressed {
+    background: linear-gradient(#b6bbc2, #ccd1d9);
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.keyboard__key--1 {
+    aspect-ratio: 1/1;
+}
+
+.keyboard__key--1_5 {
+    aspect-ratio: 3/2;
+}
+
+.keyboard__key--2 {
+    aspect-ratio: 4/2;
+}
+
+.keyboard__key--5 {
+    aspect-ratio: 7.5/1;
+}
+
+.light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6.4rem;
+    user-select: none;
+    z-index: 99;
+}
+
+.light-0 {
+    transform: translate(-50%, -50%) rotate(-28deg);
+    animation: fly0 250ms ease-in-out both;
+}
+
+.light-1 {
+    transform: translate(-50%, -50%) rotate(28deg);
+    animation: fly1 250ms ease-in-out both;
+}
+
+.light-2 {
+    transform: translate(-50%, -50%) rotate(-28deg);
+    animation: fly2 250ms ease-in-out both;
+}
+
+.light-3 {
+    transform: translate(-50%, -50%) rotate(28deg);
+    animation: fly3 250ms ease-in-out both;
+}
+
+@keyframes fly0 {
+    100% {
+        opacity: 0;
+        transform: scale(5) rotate(28deg);
+    }
+}
+
+@keyframes fly1 {
+    100% {
+        opacity: 0;
+        transform: scale(5) rotate(-56deg);
+    }
+}
+
+@keyframes fly2 {
+    100% {
+        opacity: 0;
+        transform: scale(5) rotate(-56deg);
+    }
+}
+
+@keyframes fly3 {
+    100% {
+        opacity: 0;
+        transform: scale(5) rotate(28deg);
+    }
+}

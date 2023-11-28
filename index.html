@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" id="root">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Iago Oliveira (@iagoOliv)">
+    <meta name="description" content="Um teclado escrito em JavaScript Vanilla!">
+    <meta name="og:author" content="Iago Oliveira (@iagoOliv)">
+    <meta name="og:description" content="Um teclado escrito em JavaScript Vanilla!">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>KeeBoDo</title>
+</head>
+
+<body>
+    <a class="copyright" href="https://github.com/iagoOliv">
+        <span>2023</span>
+        <span>Made with 💙 by Iago</span>
+    </a>
+
+    <section class="output" id="output"></section>
+    <div class="keyboard__depth">
+        <section class="keyboard" id="keyboard">
+            <div class="keyboard__cable"></div>
+
+            <!--1 2 3 4 5 6 7 8 9 0 - = -->
+            <div class="keyboard__row">
+                <button class="keyboard__key keyboard__key--1  " id="Backquote"><span
+                        class="keyboard__key--text">'</span><span class="keyboard__key--subtext">"</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit1"><span
+                        class="keyboard__key--text">1</span><span class="keyboard__key--subtext">!</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit2"><span
+                        class="keyboard__key--text">2</span><span class="keyboard__key--subtext">@</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit3"><span
+                        class="keyboard__key--text">3</span><span class="keyboard__key--subtext">#</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit4"><span
+                        class="keyboard__key--text">4</span><span class="keyboard__key--subtext">$</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit5"><span
+                        class="keyboard__key--text">5</span><span class="keyboard__key--subtext">%</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit6"><span
+                        class="keyboard__key--text">6</span><span class="keyboard__key--subtext">¨</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit7"><span
+                        class="keyboard__key--text">7</span><span class="keyboard__key--subtext">&</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit8"><span
+                        class="keyboard__key--text">8</span><span class="keyboard__key--subtext">*</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit9"><span
+                        class="keyboard__key--text">9</span><span class="keyboard__key--subtext">(</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Digit0"><span
+                        class="keyboard__key--text">0</span><span class="keyboard__key--subtext">)</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Minus"><span
+                        class="keyboard__key--text">-</span><span class="keyboard__key--subtext">_</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Equal"><span
+                        class="keyboard__key--text">=</span><span class="keyboard__key--subtext">+</span></button>
+                <button class="keyboard__key keyboard__key--2  " id="Backspace"><img
+                        class="keyboard__key--text keyboard__key--logo" src="assets/arrow-back-outline.svg"></img><span
+                        class="keyboard__key--subtext"></span></button>
+            </div>
+
+            <!-- Q W E R T Y U I O P -->
+            <div class="keyboard__row">
+                <button class="keyboard__key keyboard__key--1_5" id="Tab"><span
+                        class="keyboard__key--text">TAB</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyQ"><span
+                        class="keyboard__key--text">Q</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyW"><span
+                        class="keyboard__key--text">W</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyE"><span
+                        class="keyboard__key--text">E</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyR"><span
+                        class="keyboard__key--text">R</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyT"><span
+                        class="keyboard__key--text">T</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyY"><span
+                        class="keyboard__key--text">Y</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyU"><span
+                        class="keyboard__key--text">U</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyI"><span
+                        class="keyboard__key--text">I</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyO"><span
+                        class="keyboard__key--text">O</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyP"><span
+                        class="keyboard__key--text">P</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="BracketLeft"><span
+                        class="keyboard__key--text">´</span><span class="keyboard__key--subtext">`</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="BracketRight"><span
+                        class="keyboard__key--text">[</span><span class="keyboard__key--subtext">{</span></button>
+                <button class="keyboard__key keyboard__key--1_5" id="Backslash"><span
+                        class="keyboard__key--text">]</span><span class="keyboard__key--subtext">}</span></button>
+            </div>
+
+            <!-- A S D F G H J K L Ç -->
+            <div class="keyboard__row">
+                <button class="keyboard__key keyboard__key--2" id="CapsLock"><span class="keyboard__key--text">CAPS
+                        LOCK</span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyA"><span class="keyboard__key--text">A</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyS"><span class="keyboard__key--text">S</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyD"><span class="keyboard__key--text">D</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyF"><span class="keyboard__key--text">F</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyG"><span class="keyboard__key--text">G</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyH"><span class="keyboard__key--text">H</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyJ"><span class="keyboard__key--text">J</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyK"><span class="keyboard__key--text">K</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="KeyL"><span class="keyboard__key--text">L</span><span
+                        class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="Semicolon"><span
+                        class="keyboard__key--text">Ç</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1" id="Quote"><span
+                        class="keyboard__key--text">~</span><span class="keyboard__key--subtext">^</span></button>
+                <button class="keyboard__key keyboard__key--2" id="Enter"><span
+                        class="keyboard__key--text">Enter</span><span class="keyboard__key--subtext"></span></button>
+            </div>
+
+            <!-- Z X C V B N M -->
+            <div class="keyboard__row">
+                <button class="keyboard__key keyboard__key--1_5" id="ShiftLeft"><span
+                        class="keyboard__key--text">SHIFT</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="IntlBackslash"><span
+                        class="keyboard__key--text">\</span><span class="keyboard__key--subtext">|</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyZ"><span
+                        class="keyboard__key--text">Z</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyX"><span
+                        class="keyboard__key--text">X</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyC"><span
+                        class="keyboard__key--text">C</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyV"><span
+                        class="keyboard__key--text">V</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyB"><span
+                        class="keyboard__key--text">B</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyN"><span
+                        class="keyboard__key--text">N</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="KeyM"><span
+                        class="keyboard__key--text">M</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Comma"><span
+                        class="keyboard__key--text">,</span><span class="keyboard__key--subtext">&lt;</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Period"><span
+                        class="keyboard__key--text">.</span><span class="keyboard__key--subtext">&gt;</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="Slash"><span
+                        class="keyboard__key--text">;</span><span class="keyboard__key--subtext">:</span></button>
+                <button class="keyboard__key keyboard__key--1  " id="IntlRo"><span
+                        class="keyboard__key--text">/</span><span class="keyboard__key--subtext">?</span></button>
+                <button class="keyboard__key keyboard__key--1_5" id="ShiftRight"><span
+                        class="keyboard__key--text">SHIFT</span><span class="keyboard__key--subtext"></span></button>
+            </div>
+
+            <!-- COMMANDS -->
+            <div class="keyboard__row">
+                <button class="keyboard__key keyboard__key--1_5" id="ControlLeft"><span
+                        class="keyboard__key--text">CTRL</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="MetaLeft"><img
+                        class="keyboard__key--text keyboard__key--logo" src="assets/windows.svg" alt="Windows Key"></img><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1_5" id="AltLeFt"><span
+                        class="keyboard__key--text">ALT</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--5  " id="Space"><span
+                        class="keyboard__key--text">SPACE</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1_5" id="AltRight"><span
+                        class="keyboard__key--text">ALT</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1_5" id=""><span
+                        class="keyboard__key--text">OPTION</span><span class="keyboard__key--subtext"></span></button>
+                <button class="keyboard__key keyboard__key--1  " id="ControlRight"><span
+                        class="keyboard__key--text">CTRL</span><span class="keyboard__key--subtext"></span></button>
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
