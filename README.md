@@ -1,6 +1,6 @@
 # KeeBoDo
 
-KeeBoDo é um teclado virtal para o Português escrito em JavaScript Vanilla.
+KeeBoDo é um teclado virtual para o Português escrito em JavaScript Vanilla.
 
 <div align=center>
 
